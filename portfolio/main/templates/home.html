@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Page d'accueil {% endblock title %}
+
+   {% block head %}
+   <link rel="stylesheet" href="{% static 'css/home.css' %}">
+   {% endblock head %}
+
+
+{% block content %}
+    <div class="filters">
+        <input type="text " id="name-search" placeholder="Rechercher par nom ou par téchnologie utilisée selon le projet...">
+        <div class="tags-list">
+            {% for tag in tags %}
+                <button class="tag" data-tag="{{ tag.nom|lower }}">{{ tag.nom }}</button>
+            {% endfor %}
+        </div>
+    </div>
+
+
+    <div class="projet-list">
+        {% for projet in projets %}
+            <div class="projet" data-name="{{ projet.titre|lower }}" data-tags="{{ projet.tags.all|join:', '|lower}}">
+                <h2><a href="{% url 'projet' projet.id %}">{{ projet.titre }}</a></h2>
+                <p>{{ projet.description|truncatechars:30 }}</p>
+                <p>Tags: {{ projet.tags.all|join:', ' }}</p>
+            </div>
+        {% endfor %}
+
+    </div>
+{% endblock content %}
+
+
+{% block content_js %}
+    <script src="{% static 'js/home.js' %}"></script>
+{% endblock content_js %}

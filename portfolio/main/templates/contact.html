@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Home page {% endblock title %}
+
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock head %}
+
+   
+{% block content %}
+
+<div class="cover">
+    <img class="cover-profile" src="{% static 'images/bassirou.jpg' %}" alt="My image"> 
+    <h1>Bassirou CISSE</h1>
+    <p>Développeur Back-end | Recherche alternance</p>
+    
+    <div style="text-align: center;">
+        <a class="contact-button" href="mailto:bassiroucisse1711@gmail.com?subject=Contact%20depuis%20bassiroucisse.com">ME CONTACTER</a>
+    </div>
+
+    <div class="cover-contact">
+        <p><a href="mailto:bassiroucisse1711@gmail.com?subject=Contact%20depuis%20bassiroucisse.com">bassiroumbackebassirou@gmail.com</a></p>
+        <p><a href="tel:+33758252282"> 0454664367 </a></p>   
+    </div>
+</div>
+
+    <!-- section grise 1 -->
+<div class="section section-grise1 " >
+    <div class="separateur"></div>
+    <p>je développe vos<b> applications web</b> ou <b>vos projets web</b></p>
+</div>
+
+<!-- SECTION BLANCHE -->
+<div class="section" >
+    <h2>En savoir plus </h2>
+    <div class="flex-contain">
+        <img src="{% static 'images/growthevent.jpg' %}" class="col-contenu">
+        <div class="col-contenu float-right; ">
+            <div class="texte-avec-ligne-verticale">
+                <!-- <h2>Je suis <span></span></h2> -->
+                <h2 id="h2-span" >Je suis 
+                    <span style="--i:0" data-text="Développeur">Développeur</span>
+                    <span style="--i:1" data-text="Designer">Designer</span>
+                    
+                </h2>
+        
+
+                <p >Bienvenue sur mon portfolio ! Je suis passionné par le développement <b>web, application, logiciel</b> et tout ce qui touche à la création numérique. 
+                    <!-- <br> -->
+
+                <p>Depuis que j'ai découvert le monde du code, je m'efforce d'explorer et de maîtriser les différentes technologies qui façonnent le paysage du web moderne. </p> 
+                <p>Avec une expertise dans les langages de programmation tels que <b>HTML, CSS, JavaScript, Python, Django, Htmx, Tailwindcss</b>  je crée des expériences web dynamiques et engageantes. 
+                    Mon objectif est de concevoir des sites web réactifs, intuitifs et esthétiquement agréables, offrant ainsi aux utilisateurs une expérience exceptionnelle.
+                </p> 
+                <p>Par le biais de mon portfolio, j'espère vous donner un aperçu de mon travail et de mon engagement envers l'innovation et la qualité dans le domaine du développement web. N'hésitez pas à explorer mes projets et à me contacter pour discuter de vos idées et besoins en matière de développement web. 
+                Ensemble, créons des expériences numériques remarquables !</p>
+
+                <a class="btn-plus" href="https://www.linkedin.com/in/bassirou-mbacké-cissé-683529263" target="_blank">En savoir plus sur mon profil</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<!-- SECTION BLANCHE -->
+<div class="section" >
+
+</div> 
+
+<!-- FRAME -->
+
+<div  class="section">
+    <div class="separateur display-mobile" style="margin-bottom: 15px;"></div>
+
+    <div class="frame">
+        <p class="frame-title">Parlons de votre projet</p>
+        <table style="width: 100%;">
+            <tr>
+                <td align="center"><img src="{% static 'images/bassirou.jpg' %}" class="image-event"></td>
+                <td>
+                    <div class="ligne-verticale" style="margin-left: 20px; margin-top: -20px;">
+                        <p>Besoin de discuter de votre projet je suis disponible à vous proposer mes services et mes compétences. 
+                            <br>
+                            
+                            <a href="mailto:bassiroucisse@gmail.com?subject=Contact%20depuis%20bassiroucisse.com" style="color: #FB5285;">Contactez-moi par email</a> ou directement par téléphone 
+                            <a href="tel:+33750252282" style="color: #FB5285;">0758252282</a>
+                        </p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</div>
+
+
+
+
+
+
+{% endblock content %}
+ 
+

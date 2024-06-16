@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Home page {% endblock title %}
+
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/projet.css' %}">
+{% endblock head %}
+
+   
+{% block content %}
+    <div class="projet-card">
+        <div class="projet-info">
+            <h1>{{ projet.titre }}</h1>
+            <p><a href="{{ projet.lien }}">Lien projet</a></p>
+            <p>{{ projet.description }}</p>
+            <a href="{% url 'home' %}">Retour à l'accueil </a>
+        </div>
+
+        <div class="carousel">
+            <div class="carousel-images">
+                {% for image in projet.images.all %}
+                    <div class="carousel-item">
+                        <!-- <img src="{{ projet.image.url }}"> -->
+                        <img src="{{ image.image.url }}" alt="Image du projet">
+                    </div>
+
+                {% endfor %}
+            </div>
+
+            <!-- javaScripts slider left right -->
+            <a class="carousel-control prev" Onclick="moveSlide(-1)">&#10094;</a>
+            <a class="carousel-control next" Onclick="moveSlide(1)">&#10095;</a>
+        </div>
+    </div>
+{% endblock content %}
+ 
+
+{% block content_js %}
+    <script src="{% static 'js/projet.js' %}"></script>
+{% endblock content_js %}

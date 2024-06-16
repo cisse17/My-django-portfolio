@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock head %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <!-- frame -->
+<div  class="section">
+    <div class="separateur display-mobile" style="margin-bottom: 15px;"></div>
+
+    <div class="frame">
+        <p class="frame-title">Parlons de votre projet</p>
+        <table style="width: 100%;">
+            <tr>
+                <td valign="top" align="center"><img src="profile.png"></td>
+                <td>
+                    <div class="texte-avec-ligne-verticale" style="margin-left: 20px;">
+                        <p>Besoin de discuter de votre projet  qfsigbknlbgfn gsbhdtr et obtenir l'avis d'un expert ? 
+                            <br><br>
+                            
+                            <a href="mailto:bassiroucisse@gmail.com?subject=Contact%20depuis%20bassiroucisse.com">Contactez-moi par email</a> ou directement apr telepjone 
+                            <a href="tel:+33750252282">0 0807 U7077 </a>
+                        </p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</div>
+</body>
+</html>
+
+{% endblock content %}
