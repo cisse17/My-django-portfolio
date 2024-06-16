@@ -19,10 +19,6 @@ DEBUG = env.bool("DEBUG", False)
 
 # ALLOWED_HOSTS = env.list("ALLOWED_HOSTS ")
 ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=['127.0.0.1', 'localhost'])
-print(DEBUG)
-print(ALLOWED_HOSTS)
-print(SECRET_KEY)
-print(type(DEBUG))
 
 # Application definition
 
